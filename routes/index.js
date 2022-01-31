@@ -13,6 +13,11 @@ router.get("/contacto", (req, res) => {
     res.send("Contacto")
 })
 
+router.get("/hello", (req, res) => {
+    res.send("hello")
+})
+
+
 
 
 // 3. EXPORTACIONES
