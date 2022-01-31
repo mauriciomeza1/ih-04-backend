@@ -17,7 +17,9 @@ router.get("/hello", (req, res) => {
     res.send("hello")
 })
 
-
+router.get("/sponge", (req, res) => {
+    res.render("index")
+})
 
 
 // 3. EXPORTACIONES

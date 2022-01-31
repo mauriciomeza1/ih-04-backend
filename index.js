@@ -24,9 +24,24 @@ const express = require("express")
 const app     = express()           //GENERAR INSTANCIA DE APP
 
 // 2. MIDDLEWARES
+//FUNCIONES QUE SE RECIBEN ANTES DE ENTRAR A LA RUTA
 //ACTIVAR VARIABLES DE ENTORNO
 //SI ESTAS EN LOCAL VALE UNA COSA, EN REMOTO VALE OTRA
 require("dotenv").config()
+
+//ACTIVA LA CARPETA PÚBLICA DEL PROYECTO
+app.use(express.static("public"))
+
+
+//ESTABLECER VISTAS
+//LOCAL: __dirname vale http://localhost:PORT
+//REMOTO: __dirname vale https://mauricio-ih-04-backend.herokuapp.com
+//DECIR DÓNDE ESTÁ LA CARPETA DE VISTAS
+app.set("views", __dirname + "/views")
+
+//INDICAR QUÉ MOTOR DE TEMPLATE VAMOS A USAR
+//HANDLEBARS - ES UN MOTOR QUE PERMITE MANEJAR LÓGICA DENTRO DE ARCHIVOS HTML
+app.set("view engine", "hbs")
 
 
 // 3. RUTAS 
