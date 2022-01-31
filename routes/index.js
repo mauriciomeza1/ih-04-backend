@@ -9,6 +9,9 @@ router.get("/", (req, res) => {
     res.send("Hola mundo")
 })
 
+router.get("/contacto", () => {
+    res.send("Contacto")
+})
 
 
 
