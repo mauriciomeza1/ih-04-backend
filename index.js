@@ -24,6 +24,7 @@ const express = require("express")
 const app     = express()           //GENERAR INSTANCIA DE APP
 
 // 2. MIDDLEWARES
+//
 
 
 // 3. RUTAS 
